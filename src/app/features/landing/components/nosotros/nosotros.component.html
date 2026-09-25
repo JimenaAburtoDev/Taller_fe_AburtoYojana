@@ -1,0 +1,32 @@
+<section id="nosotros" class="nosotros">
+  <div class="contenedor nosotros__interior">
+    <div class="nosotros__imagen">
+      <div class="nosotros__imagen-marco">
+        <img
+          src="https://st5.depositphotos.com/1439758/61935/v/450/depositphotos_619353774-stock-illustration-manicure-beauty-salon-banner.jpg"
+          alt="Manicura en un salon de belleza"
+        />
+      </div>
+    </div>
+
+    <div class="nosotros__texto">
+      <div class="titulo-seccion titulo-seccion--izquierda">
+        <span>Sobre nosotros</span>
+        <h2>{{ titulo }}</h2>
+      </div>
+      <p>{{ descripcion }}</p>
+
+      <div class="nosotros__valores">
+        @for (valor of valores; track valor.titulo) {
+          <div class="nosotros__valor">
+            <span class="nosotros__valor-icono">{{ valor.icono }}</span>
+            <div>
+              <h4>{{ valor.titulo }}</h4>
+              <p>{{ valor.texto }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

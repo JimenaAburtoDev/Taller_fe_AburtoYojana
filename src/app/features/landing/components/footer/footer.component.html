@@ -1,0 +1,27 @@
+<footer class="footer">
+  <div class="contenedor footer__interior">
+    <div class="footer__marca">
+      <h3>{{ marca }} <span>✨</span></h3>
+      <p>Tu espacio de belleza y bienestar en el corazón de Miraflores.</p>
+
+      <div class="footer__redes">
+        @for (red of redes; track red.nombre) {
+          <a [href]="red.href" [attr.aria-label]="red.nombre">{{ red.icono }}</a>
+        }
+      </div>
+    </div>
+
+    <div class="footer__enlaces">
+      <h4>Navegación</h4>
+      <ul>
+        @for (enlace of enlaces; track enlace.href) {
+          <li><a [href]="enlace.href">{{ enlace.texto }}</a></li>
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__linea"></div>
+
+  <p class="footer__copy">© {{ anioActual }} {{ marca }}. Todos los derechos reservados. Proyecto académico — Taller Frontend Angular.</p>
+</footer>

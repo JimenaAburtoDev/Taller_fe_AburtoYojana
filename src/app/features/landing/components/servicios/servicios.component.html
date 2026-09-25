@@ -1,0 +1,22 @@
+<section id="servicios" class="servicios">
+  <div class="contenedor">
+    <div class="titulo-seccion">
+      <span>Lo que ofrecemos</span>
+      <h2>Nuestros Servicios</h2>
+    </div>
+
+    <div class="servicios__grid">
+      @for (servicio of servicios; track servicio.nombre) {
+        <article class="servicio__tarjeta">
+          <div class="servicio__icono">{{ servicio.icono }}</div>
+          <h3>{{ servicio.nombre }}</h3>
+          <p>{{ servicio.descripcion }}</p>
+          <div class="servicio__pie">
+            <span class="servicio__precio">{{ servicio.precio }}</span>
+            <a href="#contacto" class="servicio__enlace">Reservar →</a>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

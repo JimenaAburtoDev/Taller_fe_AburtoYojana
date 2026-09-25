@@ -1,0 +1,78 @@
+.footer {
+  background-color: var(--color-vino);
+  color: var(--color-crema);
+  padding: 64px 0 24px;
+}
+
+.footer__interior {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer__marca h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.footer__marca p {
+  font-size: 0.9rem;
+  color: #e9c9d1;
+  max-width: 340px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer__redes {
+  display: flex;
+  gap: 14px;
+}
+
+.footer__redes a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  font-size: 1.1rem;
+}
+
+.footer__enlaces h4 {
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.footer__enlaces ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__enlaces a {
+  font-size: 0.9rem;
+  color: #e9c9d1;
+}
+
+.footer__linea {
+  max-width: 1180px;
+  margin: 0 auto;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.footer__copy {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #e9c9d1;
+  margin-top: 24px;
+}
+
+@media (max-width: 700px) {
+  .footer__interior {
+    grid-template-columns: 1fr;
+  }
+}

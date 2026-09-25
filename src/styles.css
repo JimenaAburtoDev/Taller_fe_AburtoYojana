@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-rosa: #d9a5b3;
+  --color-rosa-oscuro: #b97c8c;
+  --color-vino: #7a3b46;
+  --color-dorado: #c9a66b;
+  --color-crema: #fdf6f0;
+  --color-blanco: #ffffff;
+  --color-texto: #3a2a2e;
+  --fuente-titulo: 'Playfair Display', serif;
+  --fuente-texto: 'Poppins', sans-serif;
+}
+
+html, body {
+  font-family: var(--fuente-texto);
+  color: var(--color-texto);
+  scroll-behavior: smooth;
+  background-color: var(--color-blanco);
+}
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulo);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.contenedor {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+}
+
+.boton-primario {
+  background-color: var(--color-vino);
+  color: var(--color-blanco);
+  box-shadow: 0 6px 16px rgba(122, 59, 70, 0.3);
+}
+
+.boton-secundario {
+  background-color: transparent;
+  color: var(--color-vino);
+  border: 1.5px solid var(--color-vino);
+}
+
+section {
+  padding: 90px 0;
+}
+
+.titulo-seccion {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.titulo-seccion span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: var(--color-dorado);
+  font-weight: 600;
+}
+
+.titulo-seccion h2 {
+  font-size: 2.3rem;
+  margin-top: 8px;
+  color: var(--color-vino);
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+  .titulo-seccion h2 {
+    font-size: 1.8rem;
+  }
+}

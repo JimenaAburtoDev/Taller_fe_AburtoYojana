@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <div class="contenedor navbar__interior">
+    <a href="#inicio" class="navbar__marca" (click)="irASeccion($event, 'inicio')">{{ marca }} <span>✨</span></a>
+
+    <ul class="navbar__menu" [class.activo]="menuAbierto">
+      @for (enlace of enlaces; track enlace.href) {
+        <li><a [href]="enlace.href" (click)="irASeccion($event, enlace.href.slice(1))">{{ enlace.texto }}</a></li>
+      }
+    </ul>
+
+    <a href="#contacto" class="boton boton-primario navbar__cta" (click)="irASeccion($event, 'contacto')">Reservar cita</a>
+
+    <button class="navbar__toggle" (click)="alternarMenu()" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>

@@ -1,0 +1,49 @@
+<section id="contacto" class="contacto">
+  <div class="contenedor">
+    <div class="titulo-seccion">
+      <span>Hablemos</span>
+      <h2>Reserva tu cita</h2>
+    </div>
+
+    <div class="contacto__grid">
+      <div class="contacto__info">
+        @for (dato of datos; track dato.texto) {
+          <div class="contacto__dato">
+            <span class="contacto__icono">{{ dato.icono }}</span>
+            <p>{{ dato.texto }}</p>
+          </div>
+        }
+      </div>
+
+      <form class="contacto__formulario" (ngSubmit)="enviarFormulario()" #f="ngForm">
+        <input
+          type="text"
+          name="nombre"
+          placeholder="Tu nombre"
+          [(ngModel)]="nombre"
+          required
+        />
+        <input
+          type="email"
+          name="correo"
+          placeholder="Tu correo"
+          [(ngModel)]="correo"
+          required
+        />
+        <textarea
+          name="mensaje"
+          rows="4"
+          placeholder="Cuéntanos qué servicio te interesa"
+          [(ngModel)]="mensaje"
+          required
+        ></textarea>
+
+        <button type="submit" class="boton boton-primario" [disabled]="f.invalid">Enviar mensaje</button>
+
+        @if (enviado) {
+          <p class="contacto__confirmacion">¡Gracias {{ nombre || 'por escribirnos' }}! Te contactaremos pronto.</p>
+        }
+      </form>
+    </div>
+  </div>
+</section>
